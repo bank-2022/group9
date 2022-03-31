@@ -1,4 +1,4 @@
 # group9
 
-ER-diagrammi
-<img src="C:/Users/jusu9/OneDrive/Työpöytä/Stuff/Koulujutut/BankSimul/er_kaavio.png">
+ER-diagrammi:
+<img src=”documents/er_kaavio.png”>
