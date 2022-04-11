@@ -9,14 +9,32 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    changepassword.cpp \
+    login.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainui.cpp \
+    mainwindow.cpp \
+    nosto.cpp \
+    saldo.cpp \
+    transactions.cpp
 
 HEADERS += \
-    mainwindow.h
+    changepassword.h \
+    login.h \
+    mainui.h \
+    mainwindow.h \
+    nosto.h \
+    saldo.h \
+    transactions.h
 
 FORMS += \
-    mainwindow.ui
+    changepassword.ui \
+    login.ui \
+    mainui.ui \
+    mainwindow.ui \
+    nosto.ui \
+    saldo.ui \
+    transactions.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
