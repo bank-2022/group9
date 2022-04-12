@@ -10,13 +10,28 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    nosto.cpp \
+    paavalikko.cpp \
+    salasana.cpp \
+    saldo.cpp \
+    tapahtumat.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    nosto.h \
+    paavalikko.h \
+    salasana.h \
+    saldo.h \
+    tapahtumat.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    nosto.ui \
+    paavalikko.ui \
+    salasana.ui \
+    saldo.ui \
+    tapahtumat.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
