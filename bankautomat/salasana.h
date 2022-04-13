@@ -15,6 +15,9 @@ public:
     explicit Salasana(QWidget *parent = nullptr);
     ~Salasana();
 
+private slots:
+    void on_btnSulje_clicked();
+
 private:
     Ui::Salasana *ui;
 };

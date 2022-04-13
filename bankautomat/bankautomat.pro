@@ -18,6 +18,7 @@ SOURCES += \
     salasana.cpp \
     saldo.cpp \
     tapahtumat.cpp \
+    vahvistus.cpp \
     wrongpin.cpp
 
 HEADERS += \
@@ -29,6 +30,7 @@ HEADERS += \
     salasana.h \
     saldo.h \
     tapahtumat.h \
+    vahvistus.h \
     wrongpin.h
 
 FORMS += \
@@ -40,6 +42,7 @@ FORMS += \
     salasana.ui \
     saldo.ui \
     tapahtumat.ui \
+    vahvistus.ui \
     wrongpin.ui
 
 # Default rules for deployment.

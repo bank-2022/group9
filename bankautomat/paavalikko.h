@@ -6,6 +6,7 @@
 #include "saldo.h"
 #include "tapahtumat.h"
 #include "salasana.h"
+#include "vahvistus.h"
 
 namespace Ui {
 class paavalikko;
@@ -36,6 +37,7 @@ private:
     Saldo *pSaldo;
     Tapahtumat *pTapahtumat;
     Salasana *pSalasana;
+    vahvistus * pVahvistus;
 };
 
 #endif // PAAVALIKKO_H

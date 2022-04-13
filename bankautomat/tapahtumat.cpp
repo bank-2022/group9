@@ -12,3 +12,9 @@ Tapahtumat::~Tapahtumat()
 {
     delete ui;
 }
+
+void Tapahtumat::on_btnSulje_clicked()
+{
+    this->close();
+}
+

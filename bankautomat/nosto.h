@@ -28,6 +28,8 @@ private slots:
 
     void on_btn500_clicked();
 
+    void on_btnSulje_clicked();
+
 private:
     Ui::Nosto *ui;
 };

@@ -48,3 +48,9 @@ void Nosto::on_btn500_clicked()
 
 }
 
+
+void Nosto::on_btnSulje_clicked()
+{
+    this->close();
+}
+

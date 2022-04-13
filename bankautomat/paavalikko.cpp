@@ -11,6 +11,7 @@ paavalikko::paavalikko(QWidget *parent) :
     pSaldo = new Saldo;
     pTapahtumat = new Tapahtumat;
     pSalasana = new Salasana;
+    pVahvistus = new vahvistus;
 }
 
 paavalikko::~paavalikko()
@@ -20,6 +21,7 @@ paavalikko::~paavalikko()
     delete pSaldo;
     delete pTapahtumat;
     delete pSalasana;
+    delete pVahvistus;
 }
 
 void paavalikko::on_btnSaldo_clicked()
@@ -42,7 +44,7 @@ pNosto->show();
 
 void paavalikko::on_btnKirjauduUlos_clicked()
 {
-
+pVahvistus->show();
 }
 
 

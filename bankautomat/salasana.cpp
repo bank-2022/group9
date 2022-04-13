@@ -12,3 +12,9 @@ Salasana::~Salasana()
 {
     delete ui;
 }
+
+void Salasana::on_btnSulje_clicked()
+{
+    this->close();
+}
+
