@@ -34,7 +34,6 @@ private:
     paavalikko * pPaavalikko;
     WrongPIN * pWrongPIN;
     Locked * pLocked;
-
     string password = "1234";
     int PINcount = 0;
 };
