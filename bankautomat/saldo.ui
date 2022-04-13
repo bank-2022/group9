@@ -26,14 +26,17 @@
     <string>Saldosi on:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLabel" name="saldoLabel">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>140</x>
      <y>80</y>
-     <width>241</width>
-     <height>22</height>
+     <width>49</width>
+     <height>16</height>
     </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

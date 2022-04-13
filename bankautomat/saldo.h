@@ -17,6 +17,8 @@ public:
 
 private:
     Ui::Saldo *ui;
+
+    float saldo = 2094.42f;
 };
 
 #endif // SALDO_H
