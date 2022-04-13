@@ -2,6 +2,13 @@
 #define KIRJAUDU_H
 
 #include <QDialog>
+#include <string>
+#include "paavalikko.h"
+#include "wrongpin.h"
+#include "locked.h"
+
+using namespace std;
+#include "paavalikko.h"
 
 namespace Ui {
 class kirjaudu;
@@ -24,6 +31,12 @@ public slots:
 private:
     Ui::kirjaudu *ui;
     QTimer * pQTimer;
+    paavalikko * pPaavalikko;
+    WrongPIN * pWrongPIN;
+    Locked * pLocked;
+
+    string password = "1234";
+    int PINcount = 0;
 };
 
 #endif // KIRJAUDU_H
