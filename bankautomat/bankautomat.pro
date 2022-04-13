@@ -10,31 +10,37 @@ CONFIG += c++11
 
 SOURCES += \
     kirjaudu.cpp \
+    locked.cpp \
     main.cpp \
     mainwindow.cpp \
     nosto.cpp \
     paavalikko.cpp \
     salasana.cpp \
     saldo.cpp \
-    tapahtumat.cpp
+    tapahtumat.cpp \
+    wrongpin.cpp
 
 HEADERS += \
     kirjaudu.h \
+    locked.h \
     mainwindow.h \
     nosto.h \
     paavalikko.h \
     salasana.h \
     saldo.h \
-    tapahtumat.h
+    tapahtumat.h \
+    wrongpin.h
 
 FORMS += \
     kirjaudu.ui \
+    locked.ui \
     mainwindow.ui \
     nosto.ui \
     paavalikko.ui \
     salasana.ui \
     saldo.ui \
-    tapahtumat.ui
+    tapahtumat.ui \
+    wrongpin.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
