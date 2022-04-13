@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="btnSaldo">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>130</x>
      <y>30</y>
      <width>141</width>
      <height>28</height>
@@ -29,7 +29,7 @@
   <widget class="QPushButton" name="btnTapahtumat">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>130</x>
      <y>80</y>
      <width>141</width>
      <height>28</height>
@@ -42,7 +42,7 @@
   <widget class="QPushButton" name="btnNosto">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>130</x>
      <y>130</y>
      <width>141</width>
      <height>28</height>
@@ -55,7 +55,7 @@
   <widget class="QPushButton" name="btnKirjauduUlos">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>130</x>
      <y>180</y>
      <width>141</width>
      <height>28</height>
@@ -68,7 +68,7 @@
   <widget class="QPushButton" name="btnVaihdaSalasana">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>130</x>
      <y>230</y>
      <width>141</width>
      <height>28</height>
