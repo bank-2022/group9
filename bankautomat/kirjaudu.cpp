@@ -9,6 +9,10 @@ kirjaudu::kirjaudu(QWidget *parent) :
     ui->setupUi(this);
 
     this->close();
+
+    pPaavalikko = new paavalikko;
+    pWrongPIN = new WrongPIN;
+    pLocked = new Locked;
 }
 
 kirjaudu::~kirjaudu()
@@ -18,8 +22,31 @@ kirjaudu::~kirjaudu()
 
 void kirjaudu::on_pushButton_clicked()
 {
-    std::cout << "Jatka" << std::flush;
-    std::cout << std::endl;
+    QString y = ui->PINKentta->text();
+
+    string x = "1234";
+
+    if(x == y.toStdString())
+    {
+        std::cout << "Hyvaksytty" << std::flush;
+        std::cout << std::endl;
+        pPaavalikko->show();
+    }
+    else
+    {
+        PINcount++;
+        std::cout << "Hylatty" << std::flush;
+        std::cout << std::endl;
+        std::cout << PINcount << std::flush;
+        std::cout << std::endl;
+        pWrongPIN->show();
+    }
+
+    if(PINcount == 3){
+        pWrongPIN->close();
+        pLocked->show();
+        this->close();
+    }
 }
 
 void kirjaudu::closeKirjaudu()
