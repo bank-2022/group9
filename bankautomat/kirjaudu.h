@@ -2,6 +2,7 @@
 #define KIRJAUDU_H
 
 #include <QDialog>
+#include "paavalikko.h"
 
 namespace Ui {
 class kirjaudu;
@@ -24,6 +25,7 @@ public slots:
 private:
     Ui::kirjaudu *ui;
     QTimer * pQTimer;
+    paavalikko *pPaavalikko;
 };
 
 #endif // KIRJAUDU_H

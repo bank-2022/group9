@@ -2,6 +2,10 @@
 #define PAAVALIKKO_H
 
 #include <QDialog>
+#include "nosto.h"
+#include "saldo.h"
+#include "tapahtumat.h"
+#include "salasana.h"
 
 namespace Ui {
 class paavalikko;
@@ -28,6 +32,10 @@ private slots:
 
 private:
     Ui::paavalikko *ui;
+    Nosto *pNosto;
+    Saldo *pSaldo;
+    Tapahtumat *pTapahtumat;
+    Salasana *pSalasana;
 };
 
 #endif // PAAVALIKKO_H
