@@ -8,6 +8,7 @@
 #include "locked.h"
 
 using namespace std;
+#include "paavalikko.h"
 
 namespace Ui {
 class kirjaudu;

@@ -18,6 +18,7 @@ kirjaudu::kirjaudu(QWidget *parent) :
 kirjaudu::~kirjaudu()
 {
     delete ui;
+    delete pPaavalikko;
 }
 
 void kirjaudu::on_pushButton_clicked()
@@ -52,7 +53,6 @@ void kirjaudu::on_pushButton_clicked()
             pLocked->show();
             this->close();
         }
-    }
 }
 
 void kirjaudu::closeKirjaudu()
