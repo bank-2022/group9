@@ -26,26 +26,32 @@ void kirjaudu::on_pushButton_clicked()
 
     string x = "1234";
 
-    if(x == y.toStdString())
-    {
-        std::cout << "Hyvaksytty" << std::flush;
-        std::cout << std::endl;
-        pPaavalikko->show();
-    }
-    else
-    {
-        PINcount++;
-        std::cout << "Hylatty" << std::flush;
-        std::cout << std::endl;
-        std::cout << PINcount << std::flush;
-        std::cout << std::endl;
-        pWrongPIN->show();
-    }
-
-    if(PINcount == 3){
-        pWrongPIN->close();
+    if(PINcount >= 3){
         pLocked->show();
         this->close();
+    }
+    else{
+        if(x == y.toStdString() && PINcount < 3)
+        {
+            std::cout << "Hyvaksytty" << std::flush;
+            std::cout << std::endl;
+            pPaavalikko->show();
+        }
+        else
+        {
+            PINcount++;
+            std::cout << "Hylatty" << std::flush;
+            std::cout << std::endl;
+            std::cout << PINcount << std::flush;
+            std::cout << std::endl;
+            pWrongPIN->show();
+        }
+
+        if(PINcount == 3){
+            pWrongPIN->close();
+            pLocked->show();
+            this->close();
+        }
     }
 }
 
