@@ -53,6 +53,7 @@ void kirjaudu::on_pushButton_clicked()
             pLocked->show();
             this->close();
         }
+    }
 }
 
 void kirjaudu::closeKirjaudu()
