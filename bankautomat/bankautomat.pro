@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    kirjaudu.cpp \
     main.cpp \
     mainwindow.cpp \
     nosto.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
     tapahtumat.cpp
 
 HEADERS += \
+    kirjaudu.h \
     mainwindow.h \
     nosto.h \
     paavalikko.h \
@@ -26,6 +28,7 @@ HEADERS += \
     tapahtumat.h
 
 FORMS += \
+    kirjaudu.ui \
     mainwindow.ui \
     nosto.ui \
     paavalikko.ui \
