@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,6 +17,7 @@ SOURCES += \
     nosto.cpp \
     paavalikko.cpp \
     salasana.cpp \
+    salasanavaihdettu.cpp \
     saldo.cpp \
     tapahtumat.cpp \
     wrongpin.cpp
@@ -27,6 +29,7 @@ HEADERS += \
     nosto.h \
     paavalikko.h \
     salasana.h \
+    salasanavaihdettu.h \
     saldo.h \
     tapahtumat.h \
     wrongpin.h
@@ -38,6 +41,7 @@ FORMS += \
     nosto.ui \
     paavalikko.ui \
     salasana.ui \
+    salasanavaihdettu.ui \
     saldo.ui \
     tapahtumat.ui \
     wrongpin.ui
