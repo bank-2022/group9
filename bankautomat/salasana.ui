@@ -23,23 +23,23 @@
     </rect>
    </property>
    <property name="text">
-    <string>Syötä vanha salasana</string>
+    <string>Syötä vanha salasana:</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>150</y>
+     <y>110</y>
      <width>131</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Syötä uusi salasana</string>
+    <string>Syötä uusi salasana:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineVanha">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -49,16 +49,124 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineUusi1">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>150</y>
+     <y>110</y>
      <width>171</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Vahvista uusi salasana:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineUusi2">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>170</y>
+     <width>171</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>250</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Hyväksy</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>250</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Peruuta</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>30</y>
+     <width>221</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>90</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label3">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>150</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>label1</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>lineVanha</zorder>
+  <zorder>lineUusi1</zorder>
+  <zorder>label_3</zorder>
+  <zorder>lineUusi2</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>label2</zorder>
+  <zorder>label3</zorder>
  </widget>
  <resources/>
  <connections/>

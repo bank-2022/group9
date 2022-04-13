@@ -6,6 +6,10 @@ Saldo::Saldo(QWidget *parent) :
     ui(new Ui::Saldo)
 {
     ui->setupUi(this);
+
+    QString s = QString::number(saldo, 'saldo', 2);
+
+    ui->saldoLabel->setText(s + " €");
 }
 
 Saldo::~Saldo()

@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+#include "salasanavaihdettu.h"
+
 namespace Ui {
 class Salasana;
 }
@@ -15,8 +17,15 @@ public:
     explicit Salasana(QWidget *parent = nullptr);
     ~Salasana();
 
+private slots:
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::Salasana *ui;
+    QString salasana = "asd";
+    SalasanaVaihdettu * pVaihdettu;
 };
 
 #endif // SALASANA_H

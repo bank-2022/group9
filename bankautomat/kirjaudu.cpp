@@ -26,17 +26,13 @@ void kirjaudu::on_pushButton_clicked()
 
     QString y = ui->PINKentta->text();
 
-    string x = "1234";
+    QString x = "1234";
 
-    if(PINcount >= 3){
-        pLocked->show();
-        this->close();
-    }
-    else{
-        if(x == y.toStdString() && PINcount < 3)
+        if(x == y && PINcount < 3)
         {
             std::cout << "Hyvaksytty" << std::flush;
             std::cout << std::endl;
+            this->close();
             pPaavalikko->show();
         }
         else
@@ -54,9 +50,6 @@ void kirjaudu::on_pushButton_clicked()
             pLocked->show();
             this->close();
         }
-
-    }
-
 }
 
 void kirjaudu::closeKirjaudu()
