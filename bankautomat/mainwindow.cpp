@@ -29,7 +29,12 @@ void MainWindow::closeKirjaudu()
 
 void MainWindow::on_btnLogin_clicked()
 {
-    std::cout << "Kortti syotetty" << std::flush;
-    std::cout << std::endl;
-    pKirjaudu->show();
+    if(pKirjaudu->PINcount >= 3){
+        pKirjaudu->pLocked->show();
+    }
+    else{
+        std::cout << "Kortti syotetty" << std::flush;
+        std::cout << std::endl;
+        pKirjaudu->show();
+    }
 }
