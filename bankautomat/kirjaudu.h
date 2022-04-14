@@ -36,7 +36,6 @@ private:
     QTimer * pQTimer;
     paavalikko * pPaavalikko;
     WrongPIN * pWrongPIN;
-    string password = "1234";
 };
 
 #endif // KIRJAUDU_H
