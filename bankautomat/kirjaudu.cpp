@@ -23,6 +23,7 @@ kirjaudu::~kirjaudu()
 
 void kirjaudu::on_pushButton_clicked()
 {
+
     QString y = ui->PINKentta->text();
 
     QString x = "1234";
