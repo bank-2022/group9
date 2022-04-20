@@ -20,6 +20,9 @@ MainWindow::~MainWindow()
 {
     delete ui;
     delete pKirjaudu;
+
+    ui=nullptr;
+    pKirjaudu=nullptr;
 }
 
 void MainWindow::closeKirjaudu()
@@ -38,3 +41,4 @@ void MainWindow::on_btnLogin_clicked()
         pKirjaudu->show();
     }
 }
+

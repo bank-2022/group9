@@ -6,6 +6,7 @@
 #include "saldo.h"
 #include "tapahtumat.h"
 #include "salasana.h"
+#include "korttimain.h"
 
 namespace Ui {
 class paavalikko;

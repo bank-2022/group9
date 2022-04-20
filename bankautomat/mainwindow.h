@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "kirjaudu.h"
+#include "login.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,9 +23,13 @@ public slots:
 private slots:
     void on_btnLogin_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     kirjaudu * pKirjaudu;
     QTimer * timer;
+
+    Login * pLogin;
 };
 #endif // MAINWINDOW_H

@@ -15,6 +15,8 @@ public:
     explicit WrongPIN(QWidget *parent = nullptr);
     ~WrongPIN();
 
+    QString PIN = "123456";
+
 private:
     Ui::WrongPIN *ui;
 };
