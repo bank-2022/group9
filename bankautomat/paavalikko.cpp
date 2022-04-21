@@ -1,7 +1,6 @@
 #include "paavalikko.h"
 #include "ui_paavalikko.h"
 
-
 paavalikko::paavalikko(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::paavalikko)
@@ -24,30 +23,27 @@ paavalikko::~paavalikko()
 
 void paavalikko::on_btnSaldo_clicked()
 {
-pSaldo->show();
+    pSaldo->show();
 }
-
 
 void paavalikko::on_btnTapahtumat_clicked()
 {
-pTapahtumat->show();
+    pTapahtumat->show();
 }
 
 
 void paavalikko::on_btnNosto_clicked()
 {
-pNosto->show();
+    pNosto->show();
 }
-
 
 void paavalikko::on_btnKirjauduUlos_clicked()
 {
 
 }
 
-
 void paavalikko::on_btnVaihdaSalasana_clicked()
 {
-pSalasana->show();
+    pSalasana->show();
 }
 

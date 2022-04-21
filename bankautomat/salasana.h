@@ -5,6 +5,9 @@
 
 #include "salasanavaihdettu.h"
 
+#include "wrongpin.h"
+
+
 namespace Ui {
 class Salasana;
 }
@@ -24,8 +27,11 @@ private slots:
 
 private:
     Ui::Salasana *ui;
-    QString salasana = "asd";
+
     SalasanaVaihdettu * pVaihdettu;
+
+    WrongPIN * pWrongPIN;
+
 };
 
 #endif // SALASANA_H

@@ -1,5 +1,7 @@
 QT       += core gui
+QT +=network
 QT       += sql
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -11,9 +13,11 @@ CONFIG += c++11
 
 SOURCES += \
     kirjaudu.cpp \
+    korttimain.cpp \
     locked.cpp \
     main.cpp \
     mainwindow.cpp \
+    myurl.cpp \
     nosto.cpp \
     paavalikko.cpp \
     salasana.cpp \
@@ -24,8 +28,10 @@ SOURCES += \
 
 HEADERS += \
     kirjaudu.h \
+    korttimain.h \
     locked.h \
     mainwindow.h \
+    myurl.h \
     nosto.h \
     paavalikko.h \
     salasana.h \
@@ -36,6 +42,7 @@ HEADERS += \
 
 FORMS += \
     kirjaudu.ui \
+    korttimain.ui \
     locked.ui \
     mainwindow.ui \
     nosto.ui \

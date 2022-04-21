@@ -78,6 +78,19 @@
     <string>Vaihda salasana</string>
    </property>
   </widget>
+  <widget class="QLabel" name="labelAsiakas">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
