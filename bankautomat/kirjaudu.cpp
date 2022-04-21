@@ -1,5 +1,6 @@
 #include "kirjaudu.h"
 #include "ui_kirjaudu.h"
+#include "mainwindow.h"
 #include <iostream>
 
 #include <qdebug.h>
@@ -59,13 +60,13 @@ void kirjaudu::on_pushButton_clicked()
         this->close();
     }
 
-    //qDebug() << "base_url = " + base_url;
+    qDebug() << "base_url = " + base_url;
 
     //Kortinnumero = ui->lineNumero->text();
     PINkoodi = ui->PINKentta->text();
 
     QJsonObject jsonObj; //luodaan JSON objekti ja lisätään data
-    jsonObj.insert("kortinnumero", "0001");
+    jsonObj.insert("kortinnumero", "05009BA554");
     jsonObj.insert("PINkoodi", PINkoodi);
 
     QNetworkRequest request((base_url + "/login"));

@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include "kirjaudu.h"
 #include "login.h"
+#include <QtSerialPort/QSerialPort>
+#include <QSerialPortInfo>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,6 +24,8 @@ public slots:
     void closeKirjaudu();
 
 private slots:
+
+    void serialRecieved();
     void on_btnLogin_clicked();
 
     void on_pushButton_clicked();
@@ -31,5 +36,6 @@ private:
     QTimer * timer;
 
     Login * pLogin;
+    QSerialPort *serial;
 };
 #endif // MAINWINDOW_H

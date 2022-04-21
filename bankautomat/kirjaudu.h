@@ -13,6 +13,7 @@
 #include "myurl.h"
 
 
+
 using namespace std;
 
 namespace Ui {
@@ -44,6 +45,7 @@ private:
     paavalikko * pPaavalikko;
     WrongPIN * pWrongPIN;
 
+
     KorttiMain *pKorttiMain;
 
     QString Kortinnumero;
@@ -55,6 +57,11 @@ private:
     QNetworkReply *reply;
     QByteArray response_data;
     QByteArray token;
+
+
+
+    //QString username;
+    //QString password;// = "1234";
 
 };
 
