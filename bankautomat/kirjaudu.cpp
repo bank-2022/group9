@@ -33,6 +33,7 @@ void kirjaudu::on_pushButton_clicked()
 {
     QString y = ui->PINKentta->text();
 
+
     if(pWrongPIN->PIN == y && PINcount < 3)
     {
         std::cout << "Hyvaksytty" << std::flush;
@@ -85,6 +86,7 @@ void kirjaudu::loginSlot(QNetworkReply *reply)
     ui->PINKentta->setText("");
     //pKorttiMain = new KorttiMain(PINkoodi, token);
     //pKorttiMain->show();
+
 }
 
 void kirjaudu::closeKirjaudu()
