@@ -13,62 +13,27 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>40</y>
-     <width>49</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Numero:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>80</y>
-     <width>49</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>PIN:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelSavedNumero">
+  <widget class="QPushButton" name="btnKorttiData">
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>40</y>
-     <width>231</width>
-     <height>16</height>
+     <y>240</y>
+     <width>80</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>PushButton</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelSavedPIN">
+  <widget class="QTextEdit" name="textEdit">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>80</y>
-     <width>231</width>
-     <height>16</height>
+     <x>10</x>
+     <y>10</y>
+     <width>371</width>
+     <height>221</height>
     </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

@@ -83,12 +83,11 @@ void kirjaudu::loginSlot(QNetworkReply *reply)
     token = "Bearer " + response_data;
 
     ui->PINKentta->setText("");
-    //pKorttiMain = new KorttiMain(PINkoodi, token);
-    //pKorttiMain->show();
+    pKorttiMain = new KorttiMain(Kortinnumero, PINkoodi, token);
+    pKorttiMain->show();
 }
 
 void kirjaudu::closeKirjaudu()
 {
     this->close();
 }
-
