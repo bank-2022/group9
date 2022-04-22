@@ -9,7 +9,10 @@ Salasana::Salasana(QWidget *parent) :
     ui->setupUi(this);
 
     pVaihdettu = new SalasanaVaihdettu;
+
+
     pWrongPIN = new WrongPIN;
+
 
     ui->label1->setText("");
     ui->label2->setText("");
@@ -34,24 +37,30 @@ void Salasana::on_pushButton_clicked()
 {
     bool cooldown = false;
 
+
     qDebug() << "Nykyinen salasana: " << pWrongPIN->PIN;
+
 
     QString vanhaSalis = ui->lineVanha->text();
     QString uusi1 = ui->lineUusi1->text();
     QString uusi2 = ui->lineUusi2->text();
+
 
     if(vanhaSalis == pWrongPIN->PIN && uusi1 == uusi2 && uusi1 != NULL && uusi2 != NULL && vanhaSalis != uusi1 && vanhaSalis != uusi2){
         pWrongPIN->PIN = uusi1;
         qDebug() << "Salasana vaihdettu: " << pWrongPIN->PIN;
         qDebug() << "Nykyinen salasana: " << pWrongPIN->PIN;
 
+
         this->close();
         pVaihdettu->show();
     }
 
+
     if(vanhaSalis != pWrongPIN->PIN && !cooldown){
         qDebug() << "Vanha salasana vaarin";
         ui->label1->setText("Vanha salasana väärin");
+
     }
     else{
         ui->label1->setText("");

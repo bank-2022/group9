@@ -11,7 +11,9 @@
 #include "wrongpin.h"
 #include "locked.h"
 #include "myurl.h"
+
 #include "asiakasmain.h"
+
 
 
 using namespace std;
@@ -44,6 +46,7 @@ private:
     QTimer * pQTimer;
     paavalikko * pPaavalikko;
     WrongPIN * pWrongPIN;
+
     KorttiMain *pKorttiMain;
     AsiakasMain *pAsiakasMain;
 
@@ -55,6 +58,7 @@ private:
     QString Lahiosoite;
     int Puhelin;
 
+
     MyUrl *pMyUrl;
     QString base_url;
 
@@ -62,6 +66,7 @@ private:
     QNetworkReply *reply;
     QByteArray response_data;
     QByteArray token;
+
 };
 
 #endif // KIRJAUDU_H
