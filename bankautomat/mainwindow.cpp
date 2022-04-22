@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     //ui->setupUi(this);
-    pKirjaudu = new kirjaudu;
+
     timer = new QTimer(this);
     ui->setupUi(this);
     serial = new QSerialPort(this);
@@ -65,8 +65,13 @@ void MainWindow::serialRecieved()
 
     QByteArray ba;
     ba = serial->readAll();
+    ba.remove(0, 3);
+    ba.chop(3);
     qDebug()<<ba;
-    if(ba=="\r\n-05009BA554\r\n>")
+    pKirjaudu = new kirjaudu(ba);
+    //ba2=ba;
+    if(ba=="05009BA554" || "05009BA243")
+        //\r\n-05009BA554\r\n>
     {
 
 

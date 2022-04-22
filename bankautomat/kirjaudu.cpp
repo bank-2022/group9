@@ -5,12 +5,13 @@
 
 #include <qdebug.h>
 
-kirjaudu::kirjaudu(QWidget *parent) :
+kirjaudu::kirjaudu(QString ba, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::kirjaudu)
 {
     ui->setupUi(this);
 
+    kirjaudu_ba = ba;
     this->close();
 
     pPaavalikko = new paavalikko;
@@ -66,7 +67,7 @@ void kirjaudu::on_pushButton_clicked()
     PINkoodi = ui->PINKentta->text();
 
     QJsonObject jsonObj; //luodaan JSON objekti ja lisätään data
-    jsonObj.insert("kortinnumero", "05009BA554");
+    jsonObj.insert("kortinnumero", kirjaudu_ba);
     jsonObj.insert("PINkoodi", PINkoodi);
 
     QNetworkRequest request((base_url + "/login"));

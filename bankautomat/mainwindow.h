@@ -37,5 +37,6 @@ private:
 
     Login * pLogin;
     QSerialPort *serial;
+    //QString ba2;
 };
 #endif // MAINWINDOW_H

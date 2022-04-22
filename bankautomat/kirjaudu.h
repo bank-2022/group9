@@ -25,7 +25,7 @@ class kirjaudu : public QDialog
     Q_OBJECT
 
 public:
-    explicit kirjaudu(QWidget *parent = nullptr);
+    explicit kirjaudu(QString ba,QWidget *parent = nullptr);
     ~kirjaudu();
 
     int PINcount = 0;
@@ -58,6 +58,7 @@ private:
     QByteArray response_data;
     QByteArray token;
 
+    QString kirjaudu_ba;
 
 
     //QString username;

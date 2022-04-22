@@ -52,16 +52,6 @@
     <string>Jatka</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineNumero">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>70</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>
