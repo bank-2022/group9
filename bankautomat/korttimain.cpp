@@ -14,16 +14,8 @@ KorttiMain::KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QW
     PIN = kortPIN;
     numero = kortNumero;
     webtoken = token;
-}
 
-KorttiMain::~KorttiMain()
-{
-    delete ui;
-}
-
-void KorttiMain::on_btnKorttiData_clicked()
-{
-    QString site_url=pMyUrl->getBase_url() + "/kortti/" + numero;
+    QString site_url=pMyUrl->getBase_url() + "/kortti/";
     QNetworkRequest request((site_url));
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
@@ -34,12 +26,30 @@ void KorttiMain::on_btnKorttiData_clicked()
     dataManager = new QNetworkAccessManager(this);
     connect(dataManager, SIGNAL(finished (QNetworkReply*)),this, SLOT(dataSlot(QNetworkReply*)));
     reply = dataManager->get(request);
+}
 
-    ui->textEdit->setText(response_data);
+KorttiMain::~KorttiMain()
+{
+    delete ui;
 }
 
 void KorttiMain::dataSlot(QNetworkReply *reply)
 {
     response_data = reply->readAll();
-    qDebug() << response_data;
+
+    QJsonDocument json_doc = QJsonDocument::fromJson(response_data);
+        QJsonArray json_array = json_doc.array();
+
+        //tietokannan muuttujat
+        QString kortinnumero;
+        QString PINkoodi;
+
+        foreach (const QJsonValue &value, json_array) {
+            QJsonObject json_obj = value.toObject();
+            kortinnumero+=QString(json_obj["kortinnumero"].toString());
+            PINkoodi+=QString(json_obj["PINkoodi"].toString());
+        }
+
+        qDebug()<<kortinnumero;
+        qDebug()<<PINkoodi;
 }

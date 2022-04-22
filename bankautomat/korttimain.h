@@ -21,7 +21,6 @@ public:
     ~KorttiMain();
 
 private slots:
-    void on_btnKorttiData_clicked();
     void dataSlot(QNetworkReply *reply);
 
 private:

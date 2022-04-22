@@ -11,6 +11,7 @@
 #include "wrongpin.h"
 #include "locked.h"
 #include "myurl.h"
+#include "asiakasmain.h"
 
 
 using namespace std;
@@ -44,9 +45,16 @@ private:
     paavalikko * pPaavalikko;
     WrongPIN * pWrongPIN;
     KorttiMain *pKorttiMain;
+    AsiakasMain *pAsiakasMain;
 
     QString Kortinnumero;
     QString PINkoodi;
+
+    int Tunnus;
+    QString Nimi;
+    QString Lahiosoite;
+    int Puhelin;
+
     MyUrl *pMyUrl;
     QString base_url;
 
