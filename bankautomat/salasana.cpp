@@ -10,6 +10,7 @@ Salasana::Salasana(QWidget *parent) :
 
     pVaihdettu = new SalasanaVaihdettu;
 
+
     pWrongPIN = new WrongPIN;
 
 

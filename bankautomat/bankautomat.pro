@@ -12,6 +12,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    asiakasmain.cpp \
     kirjaudu.cpp \
     korttimain.cpp \
     locked.cpp \
@@ -27,6 +28,7 @@ SOURCES += \
     wrongpin.cpp
 
 HEADERS += \
+    asiakasmain.h \
     kirjaudu.h \
     korttimain.h \
     locked.h \
@@ -41,6 +43,7 @@ HEADERS += \
     wrongpin.h
 
 FORMS += \
+    asiakasmain.ui \
     kirjaudu.ui \
     korttimain.ui \
     locked.ui \
