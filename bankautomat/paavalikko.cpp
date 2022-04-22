@@ -19,6 +19,11 @@ paavalikko::~paavalikko()
     delete pSaldo;
     delete pTapahtumat;
     delete pSalasana;
+
+    pNosto = nullptr;
+    pSaldo = nullptr;
+    pTapahtumat = nullptr;
+    pSalasana = nullptr;
 }
 
 void paavalikko::on_btnSaldo_clicked()
