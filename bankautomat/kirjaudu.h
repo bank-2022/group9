@@ -12,6 +12,9 @@
 #include "locked.h"
 #include "myurl.h"
 
+#include "asiakasmain.h"
+
+
 
 
 using namespace std;
@@ -47,9 +50,17 @@ private:
 
 
     KorttiMain *pKorttiMain;
+    AsiakasMain *pAsiakasMain;
 
     QString Kortinnumero;
     QString PINkoodi;
+
+    int Tunnus;
+    QString Nimi;
+    QString Lahiosoite;
+    int Puhelin;
+
+
     MyUrl *pMyUrl;
     QString base_url;
 

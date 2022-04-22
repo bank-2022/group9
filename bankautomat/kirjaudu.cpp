@@ -14,7 +14,7 @@ kirjaudu::kirjaudu(QString ba, QWidget *parent) :
     kirjaudu_ba = ba;
     this->close();
 
-    pPaavalikko = new paavalikko;
+    pPaavalikko = new paavalikko();
     pWrongPIN = new WrongPIN;
     pLocked = new Locked;
 
@@ -70,6 +70,7 @@ void kirjaudu::on_pushButton_clicked()
     jsonObj.insert("kortinnumero", kirjaudu_ba);
     jsonObj.insert("PINkoodi", PINkoodi);
 
+
     QNetworkRequest request((base_url + "/login"));
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
@@ -86,13 +87,15 @@ void kirjaudu::loginSlot(QNetworkReply *reply)
     token = "Bearer " + response_data;
 
     ui->PINKentta->setText("");
-    //pKorttiMain = new KorttiMain(PINkoodi, token);
-    //pKorttiMain->show();
 
+    pKorttiMain = new KorttiMain(Kortinnumero, PINkoodi, token);
+    pKorttiMain->show();
+
+    //pAsiakasMain = new AsiakasMain(Tunnus, Nimi, Lahiosoite, Puhelin, token);
+    //pAsiakasMain->show();
 }
 
 void kirjaudu::closeKirjaudu()
 {
     this->close();
 }
-
