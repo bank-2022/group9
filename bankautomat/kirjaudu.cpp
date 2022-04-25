@@ -87,7 +87,7 @@ void kirjaudu::loginSlot(QNetworkReply *reply)
     ui->PINKentta->setText("");
 
     pKorttiMain = new KorttiMain(Kortinnumero, PINkoodi, token);
-    pKorttiMain->show();
+    //pKorttiMain->show();
 
     //pAsiakasMain = new AsiakasMain(Tunnus, Nimi, Lahiosoite, Puhelin, token);
     //pAsiakasMain->show();

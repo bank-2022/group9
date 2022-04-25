@@ -54,8 +54,8 @@ void KorttiMain::dataSlot(QNetworkReply *reply)
 
         foreach (const QJsonValue &value, json_array) {
             QJsonObject json_obj = value.toObject();
-            kortinnumero+=QString(json_obj["kortinnumero"].toString());
-            PINkoodi+=QString(json_obj["PINkoodi"].toString());
+            kortinnumero=QString(json_obj["kortinnumero"].toString());
+            PINkoodi=QString(json_obj["PINkoodi"].toString());
         }
 
         qDebug()<<kortinnumero;
