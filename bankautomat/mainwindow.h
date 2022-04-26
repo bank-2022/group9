@@ -28,6 +28,8 @@ private slots:
     void serialRecieved();
     void on_btnLogin_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     kirjaudu * pKirjaudu;

@@ -10,6 +10,7 @@
 #include <QJsonDocument>
 
 
+
 namespace Ui {
 class KorttiMain;
 }

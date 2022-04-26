@@ -30,6 +30,9 @@ KorttiMain::KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QW
     connect(dataManager, SIGNAL(finished (QNetworkReply*)),this, SLOT(dataSlot(QNetworkReply*)));
     reply = dataManager->get(request);
 
+    //ui->labelSavedNumero->setText(token);
+    //ui->labelSavedPIN->setText(kortPIN);
+
 }
 
 KorttiMain::~KorttiMain()
@@ -51,16 +54,11 @@ void KorttiMain::dataSlot(QNetworkReply *reply)
 
         foreach (const QJsonValue &value, json_array) {
             QJsonObject json_obj = value.toObject();
-
             kortinnumero=QString(json_obj["kortinnumero"].toString());
             PINkoodi=QString(json_obj["PINkoodi"].toString());
         }
 
-        qDebug()<< "Kortin numero:" <<kortinnumero;
-        qDebug()<< "PIN:" << PINkoodi;
-
-        reply->deleteLater();
-        dataManager->deleteLater();
-
+        qDebug()<<kortinnumero;
+        qDebug()<<PINkoodi;
 }
 
