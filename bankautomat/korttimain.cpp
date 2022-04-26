@@ -1,6 +1,7 @@
 #include "korttimain.h"
 #include "ui_korttimain.h"
 
+
 #include <QDebug>
 
 KorttiMain::KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QWidget *parent) :
@@ -9,6 +10,7 @@ KorttiMain::KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QW
     ui(new Ui::KorttiMain)
 {
     ui->setupUi(this);
+
 
     pMyUrl = new MyUrl;
 
@@ -27,12 +29,14 @@ KorttiMain::KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QW
     dataManager = new QNetworkAccessManager(this);
     connect(dataManager, SIGNAL(finished (QNetworkReply*)),this, SLOT(dataSlot(QNetworkReply*)));
     reply = dataManager->get(request);
+
 }
 
 KorttiMain::~KorttiMain()
 {
     delete ui;
 }
+
 
 void KorttiMain::dataSlot(QNetworkReply *reply)
 {
@@ -47,6 +51,7 @@ void KorttiMain::dataSlot(QNetworkReply *reply)
 
         foreach (const QJsonValue &value, json_array) {
             QJsonObject json_obj = value.toObject();
+
             kortinnumero=QString(json_obj["kortinnumero"].toString());
             PINkoodi=QString(json_obj["PINkoodi"].toString());
         }
@@ -56,5 +61,6 @@ void KorttiMain::dataSlot(QNetworkReply *reply)
 
         reply->deleteLater();
         dataManager->deleteLater();
+
 }
 

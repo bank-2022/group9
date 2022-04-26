@@ -12,10 +12,12 @@
 #include "locked.h"
 #include "myurl.h"
 
+
 #include "asiakas.h"
 #include "asiakasmain.h"
 #include "tili.h"
 #include "tilitapahtumat.h"
+
 
 
 
@@ -51,6 +53,7 @@ private:
     WrongPIN * pWrongPIN;
 
     KorttiMain *pKorttiMain;
+
     QString Kortinnumero;
     QString PINkoodi;
 
@@ -70,6 +73,7 @@ private:
     QString PJK;
     QString Tapahtuma;
     float Summa;
+
 
     MyUrl *pMyUrl;
     QString base_url;
