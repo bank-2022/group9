@@ -1,5 +1,5 @@
-#ifndef KORTTIMAIN_H
-#define KORTTIMAIN_H
+#ifndef TILI_H
+#define TILI_H
 
 #include "myurl.h"
 
@@ -9,23 +9,22 @@
 #include <QJsonDocument>
 
 namespace Ui {
-class KorttiMain;
+class Tili;
 }
 
-class KorttiMain : public QDialog
+class Tili : public QDialog
 {
     Q_OBJECT
 
 public:
-
-    explicit KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QWidget *parent = nullptr);
-    ~KorttiMain();
+    explicit Tili(QString tiTilinumero, float tiSaldo, QByteArray token, QWidget *parent = nullptr);
+    ~Tili();
 
 private slots:
     void dataSlot(QNetworkReply *reply);
 
 private:
-    Ui::KorttiMain *ui;
+    Ui::Tili *ui;
 
     MyUrl *pMyUrl;
 
@@ -33,10 +32,9 @@ private:
     QNetworkReply *reply;
     QByteArray response_data;
 
-    QString numero;
-    QString PIN;
+    QString tilinumero;
+    float saldo;
     QByteArray webtoken;
-
 };
 
-#endif // KORTTIMAIN_H
+#endif // TILI_H

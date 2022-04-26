@@ -89,8 +89,11 @@ void kirjaudu::loginSlot(QNetworkReply *reply)
     pKorttiMain = new KorttiMain(Kortinnumero, PINkoodi, token);
     //pKorttiMain->show();
 
-    //pAsiakasMain = new AsiakasMain(Tunnus, Nimi, Lahiosoite, Puhelin, token);
-    //pAsiakasMain->show();
+    pTili = new Tili(Tilinumero, Saldo, token);
+
+    pAsiakas = new Asiakas(Tunnus, Nimi, LahiOsoite, Puhelin, token);
+
+    pTiliTapahtumat = new TiliTapahtumat(Tilinumero2, Kortinnumero2, PJK, Tapahtuma, Summa, token);
 }
 
 void kirjaudu::closeKirjaudu()

@@ -12,7 +12,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    asiakasmain.cpp \
+    asiakas.cpp \
     kirjaudu.cpp \
     korttimain.cpp \
     locked.cpp \
@@ -25,10 +25,12 @@ SOURCES += \
     salasanavaihdettu.cpp \
     saldo.cpp \
     tapahtumat.cpp \
+    tili.cpp \
+    tilitapahtumat.cpp \
     wrongpin.cpp
 
 HEADERS += \
-    asiakasmain.h \
+    asiakas.h \
     kirjaudu.h \
     korttimain.h \
     locked.h \
@@ -40,10 +42,12 @@ HEADERS += \
     salasanavaihdettu.h \
     saldo.h \
     tapahtumat.h \
+    tili.h \
+    tilitapahtumat.h \
     wrongpin.h
 
 FORMS += \
-    asiakasmain.ui \
+    asiakas.ui \
     kirjaudu.ui \
     korttimain.ui \
     locked.ui \
@@ -54,6 +58,8 @@ FORMS += \
     salasanavaihdettu.ui \
     saldo.ui \
     tapahtumat.ui \
+    tili.ui \
+    tilitapahtumat.ui \
     wrongpin.ui
 
 # Default rules for deployment.

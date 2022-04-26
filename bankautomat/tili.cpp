@@ -1,22 +1,21 @@
-#include "korttimain.h"
-#include "ui_korttimain.h"
+#include "tili.h"
+#include "ui_tili.h"
 
 #include <QDebug>
 
-KorttiMain::KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QWidget *parent) :
-
+Tili::Tili(QString tiTilinumero, float tiSaldo, QByteArray token, QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::KorttiMain)
+    ui(new Ui::Tili)
 {
     ui->setupUi(this);
 
     pMyUrl = new MyUrl;
 
-    PIN = kortPIN;
-    numero = kortNumero;
+    tilinumero = tiTilinumero;
+    saldo = tiSaldo;
     webtoken = token;
 
-    QString site_url=pMyUrl->getBase_url() + "/kortti/";
+    QString site_url=pMyUrl->getBase_url() + "/tili/";
     QNetworkRequest request((site_url));
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
@@ -29,12 +28,12 @@ KorttiMain::KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QW
     reply = dataManager->get(request);
 }
 
-KorttiMain::~KorttiMain()
+Tili::~Tili()
 {
     delete ui;
 }
 
-void KorttiMain::dataSlot(QNetworkReply *reply)
+void Tili::dataSlot(QNetworkReply *reply)
 {
     response_data = reply->readAll();
 
@@ -42,19 +41,19 @@ void KorttiMain::dataSlot(QNetworkReply *reply)
         QJsonArray json_array = json_doc.array();
 
         //tietokannan muuttujat
-        QString kortinnumero;
-        QString PINkoodi;
+        QString tilinumero;
+        QString saldo;
 
         foreach (const QJsonValue &value, json_array) {
             QJsonObject json_obj = value.toObject();
-            kortinnumero=QString(json_obj["kortinnumero"].toString());
-            PINkoodi=QString(json_obj["PINkoodi"].toString());
+
+            tilinumero=QString(json_obj["tilinumero"].toString());
+            saldo=QString::number(json_obj["saldo"].toDouble());
         }
 
-        qDebug()<< "Kortin numero:" <<kortinnumero;
-        qDebug()<< "PIN:" << PINkoodi;
+        qDebug() << "Tilinumero:" <<tilinumero;
+        qDebug()<< "Saldo:" << saldo;
 
         reply->deleteLater();
         dataManager->deleteLater();
 }
-
