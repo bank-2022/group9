@@ -1,6 +1,6 @@
 <ui version="4.0">
- <class>Tapahtumat</class>
- <widget class="QDialog" name="Tapahtumat">
+ <class>Asiakas</class>
+ <widget class="QDialog" name="Asiakas">
   <property name="geometry">
    <rect>
     <x>0</x>

@@ -12,7 +12,12 @@
 #include "locked.h"
 #include "myurl.h"
 
+
+#include "asiakas.h"
 #include "asiakasmain.h"
+#include "tili.h"
+#include "tilitapahtumat.h"
+
 
 
 
@@ -48,15 +53,26 @@ private:
     WrongPIN * pWrongPIN;
 
     KorttiMain *pKorttiMain;
-    AsiakasMain *pAsiakasMain;
 
     QString Kortinnumero;
     QString PINkoodi;
 
+    Tili *pTili;
+    QString Tilinumero;
+    float Saldo;
+
+    Asiakas *pAsiakas;
     int Tunnus;
     QString Nimi;
-    QString Lahiosoite;
+    QString LahiOsoite;
     int Puhelin;
+
+    TiliTapahtumat *pTiliTapahtumat;
+    QString Tilinumero2;
+    QString Kortinnumero2;
+    QString PJK;
+    QString Tapahtuma;
+    float Summa;
 
 
     MyUrl *pMyUrl;
@@ -66,7 +82,6 @@ private:
     QNetworkReply *reply;
     QByteArray response_data;
     QByteArray token;
-
 };
 
 #endif // KIRJAUDU_H

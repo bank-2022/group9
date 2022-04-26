@@ -1,24 +1,23 @@
-#include "korttimain.h"
-#include "ui_korttimain.h"
-
+#include "asiakas.h"
+#include "ui_asiakas.h"
 
 #include <QDebug>
 
-KorttiMain::KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QWidget *parent) :
-
+Asiakas::Asiakas(int asTunnus, QString asNimi, QString asLahiosoite, int asPuhelin, QByteArray token, QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::KorttiMain)
+    ui(new Ui::Asiakas)
 {
     ui->setupUi(this);
 
-
     pMyUrl = new MyUrl;
 
-    PIN = kortPIN;
-    numero = kortNumero;
+    tunnus = asTunnus;
+    nimi = asNimi;
+    lahiOsoite = asLahiosoite;
+    puhelin = asPuhelin;
     webtoken = token;
 
-    QString site_url=pMyUrl->getBase_url() + "/kortti/";
+    QString site_url=pMyUrl->getBase_url() + "/asiakas/";
     QNetworkRequest request((site_url));
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
@@ -29,16 +28,14 @@ KorttiMain::KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QW
     dataManager = new QNetworkAccessManager(this);
     connect(dataManager, SIGNAL(finished (QNetworkReply*)),this, SLOT(dataSlot(QNetworkReply*)));
     reply = dataManager->get(request);
-
 }
 
-KorttiMain::~KorttiMain()
+Asiakas::~Asiakas()
 {
     delete ui;
 }
 
-
-void KorttiMain::dataSlot(QNetworkReply *reply)
+void Asiakas::dataSlot(QNetworkReply *reply)
 {
     response_data = reply->readAll();
 
@@ -46,21 +43,24 @@ void KorttiMain::dataSlot(QNetworkReply *reply)
         QJsonArray json_array = json_doc.array();
 
         //tietokannan muuttujat
-        QString kortinnumero;
-        QString PINkoodi;
+        QString tunnus;
+        QString nimi;
+        QString lahiOsoite;
+        QString puhelin;
 
         foreach (const QJsonValue &value, json_array) {
             QJsonObject json_obj = value.toObject();
-
-            kortinnumero=QString(json_obj["kortinnumero"].toString());
-            PINkoodi=QString(json_obj["PINkoodi"].toString());
+            tunnus=QString::number(json_obj["tunnus"].toInt());
+            nimi=QString(json_obj["nimi"].toString());
+            lahiOsoite=QString(json_obj["lähiosoite"].toString());
+            puhelin=QString::number(json_obj["puhelinnumero"].toInt());
         }
 
-        qDebug()<< "Kortin numero:" <<kortinnumero;
-        qDebug()<< "PIN:" << PINkoodi;
+        qDebug() << "Tunnus:" <<tunnus;
+        qDebug()<< "Nimi:" << nimi;
+        qDebug() << "Osoite:" <<lahiOsoite;
+        qDebug()<< "Puhelinnumero:" << puhelin;
 
         reply->deleteLater();
         dataManager->deleteLater();
-
 }
-
