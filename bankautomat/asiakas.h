@@ -1,6 +1,5 @@
-#ifndef KORTTIMAIN_H
-#define KORTTIMAIN_H
-
+#ifndef ASIAKAS_H
+#define ASIAKAS_H
 
 #include "myurl.h"
 
@@ -9,25 +8,23 @@
 #include <QNetworkAccessManager>
 #include <QJsonDocument>
 
-
 namespace Ui {
-class KorttiMain;
+class Asiakas;
 }
 
-class KorttiMain : public QDialog
+class Asiakas : public QDialog
 {
     Q_OBJECT
 
 public:
-
-    explicit KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QWidget *parent = nullptr);
-    ~KorttiMain();
+    explicit Asiakas(int asTunnus, QString asNimi, QString asLahiosoite, int asPuhelin, QByteArray token, QWidget *parent = nullptr);
+    ~Asiakas();
 
 private slots:
     void dataSlot(QNetworkReply *reply);
 
 private:
-    Ui::KorttiMain *ui;
+    Ui::Asiakas *ui;
 
     MyUrl *pMyUrl;
 
@@ -35,10 +32,11 @@ private:
     QNetworkReply *reply;
     QByteArray response_data;
 
-    QString numero;
-    QString PIN;
+    int tunnus;
+    QString nimi;
+    QString lahiOsoite;
+    int puhelin;
     QByteArray webtoken;
-
 };
 
-#endif // KORTTIMAIN_H
+#endif // ASIAKAS_H

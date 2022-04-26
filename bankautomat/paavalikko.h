@@ -4,9 +4,10 @@
 #include <QDialog>
 #include "nosto.h"
 #include "saldo.h"
-#include "tapahtumat.h"
+
 #include "salasana.h"
 #include "korttimain.h"
+#include "tapahtumat.h"
 
 namespace Ui {
 class paavalikko;
@@ -30,6 +31,8 @@ private slots:
     void on_btnKirjauduUlos_clicked();
 
     void on_btnVaihdaSalasana_clicked();
+
+    void on_btnSelaaTapahtumia_clicked();
 
 private:
     Ui::paavalikko *ui;
