@@ -14,10 +14,13 @@ CONFIG += c++11
 SOURCES += \
 
     asiakas.cpp \
+    asiakasmain.cpp \
 
     kirjaudu.cpp \
+    kortti.cpp \
     korttimain.cpp \
     locked.cpp \
+    login.cpp \
     main.cpp \
     mainwindow.cpp \
     myurl.cpp \
@@ -27,6 +30,7 @@ SOURCES += \
     salasanavaihdettu.cpp \
     saldo.cpp \
     tapahtumat.cpp \
+
     tili.cpp \
     tilitapahtumat.cpp \
     wrongpin.cpp
@@ -34,10 +38,13 @@ SOURCES += \
 HEADERS += \
 
     asiakas.h \
+    asiakasmain.h \
 
     kirjaudu.h \
+    kortti.h \
     korttimain.h \
     locked.h \
+    login.h \
     mainwindow.h \
     myurl.h \
     nosto.h \
@@ -46,6 +53,7 @@ HEADERS += \
     salasanavaihdettu.h \
     saldo.h \
     tapahtumat.h \
+
     tili.h \
     tilitapahtumat.h \
     wrongpin.h
@@ -53,10 +61,12 @@ HEADERS += \
 FORMS += \
 
     asiakas.ui \
+    asiakasmain.ui \
 
     kirjaudu.ui \
     korttimain.ui \
     locked.ui \
+    login.ui \
     mainwindow.ui \
     nosto.ui \
     paavalikko.ui \
@@ -64,6 +74,9 @@ FORMS += \
     salasanavaihdettu.ui \
     saldo.ui \
     tapahtumat.ui \
+
+    tapahtumat2.ui \
+
     tili.ui \
     tilitapahtumat.ui \
     wrongpin.ui

@@ -24,8 +24,6 @@ public:
 private slots:
     void on_btnSaldo_clicked();
 
-    void on_btnTapahtumat_clicked();
-
     void on_btnNosto_clicked();
 
     void on_btnKirjauduUlos_clicked();
