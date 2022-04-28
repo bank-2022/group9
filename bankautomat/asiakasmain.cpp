@@ -44,7 +44,7 @@ void AsiakasMain::dataSlot(QNetworkReply *reply)
 
         foreach (const QJsonValue &value, json_array) {
             QJsonObject json_obj = value.toObject();
-            nimi+=QString(json_obj["nimi"].toString());
+            nimi=QString(json_obj["nimi"].toString());
         }
 
         qDebug()<<nimi;
