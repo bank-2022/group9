@@ -4,7 +4,6 @@
 #include <QDialog>
 
 #include "salasanavaihdettu.h"
-
 #include "wrongpin.h"
 
 

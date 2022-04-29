@@ -14,10 +14,8 @@ CONFIG += c++11
 SOURCES += \
     asiakas.cpp \
     kirjaudu.cpp \
-    kortti.cpp \
     korttimain.cpp \
     locked.cpp \
-    login.cpp \
     main.cpp \
     mainwindow.cpp \
     myurl.cpp \
@@ -34,10 +32,8 @@ SOURCES += \
 HEADERS += \
     asiakas.h \
     kirjaudu.h \
-    kortti.h \
     korttimain.h \
     locked.h \
-    login.h \
     mainwindow.h \
     myurl.h \
     nosto.h \
@@ -55,7 +51,6 @@ FORMS += \
     kirjaudu.ui \
     korttimain.ui \
     locked.ui \
-    login.ui \
     mainwindow.ui \
     nosto.ui \
     paavalikko.ui \

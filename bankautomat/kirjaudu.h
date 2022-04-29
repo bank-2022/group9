@@ -11,15 +11,10 @@
 #include "wrongpin.h"
 #include "locked.h"
 #include "myurl.h"
-
-
 #include "asiakas.h"
 #include "asiakasmain.h"
 #include "tili.h"
 #include "tilitapahtumat.h"
-
-
-
 
 using namespace std;
 

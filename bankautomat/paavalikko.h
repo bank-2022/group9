@@ -2,9 +2,9 @@
 #define PAAVALIKKO_H
 
 #include <QDialog>
+
 #include "nosto.h"
 #include "saldo.h"
-
 #include "salasana.h"
 #include "korttimain.h"
 #include "tapahtumat.h"
