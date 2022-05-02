@@ -65,20 +65,8 @@
     <string>Vaihda salasana</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelAsiakas">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>30</y>
-     <width>49</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="btnSelaaTapahtumia">
+
    <property name="geometry">
     <rect>
      <x>130</x>
@@ -89,6 +77,37 @@
    </property>
    <property name="text">
     <string>Selaa tapahtumia</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAsiakas">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>10</y>
+     <width>49</width>
+     <height>16</height>
+
+    </rect>
+   </property>
+   <property name="text">
+    <string>Selaa tapahtumia</string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+
+     <y>10</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+
+    <string>Käyttäjä:</string>
+
    </property>
   </widget>
  </widget>
