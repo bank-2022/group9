@@ -25,6 +25,9 @@ Saldo::~Saldo()
     delete ui;
 }
 
+
+void Saldo::on_btnSulje_clicked()
+
 void Saldo::showData()
 {
     MySingleton *pMySingleton = MySingleton::getInstance();
@@ -35,15 +38,8 @@ void Saldo::showData()
     ui->saldoLabel->setText(pMySingleton->getSaldo());
 }
 
-
-
-
-
-
-
-
-
 void Saldo::on_CloseSaldo_clicked()
+
 {
     this->close();
 }

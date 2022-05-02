@@ -66,6 +66,7 @@
    </property>
   </widget>
   <widget class="QPushButton" name="btnSelaaTapahtumia">
+
    <property name="geometry">
     <rect>
      <x>130</x>
@@ -78,17 +79,35 @@
     <string>Selaa tapahtumia</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelTilinumero">
+  <widget class="QLabel" name="labelAsiakas">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>70</x>
+     <y>10</y>
+     <width>49</width>
+     <height>16</height>
+
+    </rect>
+   </property>
+   <property name="text">
+    <string>Selaa tapahtumia</string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+
      <y>10</y>
      <width>49</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+
+    <string>Käyttäjä:</string>
+
    </property>
   </widget>
  </widget>

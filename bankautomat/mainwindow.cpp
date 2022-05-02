@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     timer = new QTimer(this);
 
     connect(timer, SIGNAL(timeout()), this, SLOT(closeKirjaudu()));
-    timer->start(30000);
+    timer->start(10000);
 }
 
 MainWindow::~MainWindow()

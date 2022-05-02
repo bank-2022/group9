@@ -3,6 +3,7 @@
 #include "ui_paavalikko.h"
 
 #include <QDebug>
+#include <qmessagebox.h>
 
 paavalikko::paavalikko(QWidget *parent) :
     QDialog(parent),
@@ -13,8 +14,10 @@ paavalikko::paavalikko(QWidget *parent) :
     pSaldo = new Saldo;
     pSalasana = new Salasana;
     pTapahtumat = new Tapahtumat;
-    timer = new QTimer(this);
 
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(showData()));
+    timer->start(1);
 
 }
 
@@ -32,9 +35,22 @@ paavalikko::~paavalikko()
     pSalasana = nullptr;
 }
 
+
+void paavalikko::showData()
+{
+    MySingleton *pMySingleton = MySingleton::getInstance();
+
+    ui->labelAsiakas->setText(pMySingleton->getNimi());
+}
+
+void paavalikko::closeTapahtumat()
+{
+    pTapahtumat->close();
+
 void paavalikko::closeSaldo()
 {
     pSaldo->close();
+
 }
 
 void paavalikko::on_btnSaldo_clicked()
@@ -55,7 +71,12 @@ void paavalikko::on_btnNosto_clicked()
 
 void paavalikko::on_btnKirjauduUlos_clicked()
 {
-
+    QMessageBox::StandardButton reply = QMessageBox::question(this,
+                                            "Kirjaudu ulos", "Kirjaudutaanko ulos?",
+                                            QMessageBox::Yes | QMessageBox::No);
+        if(reply == QMessageBox::Yes) {
+            paavalikko::close();
+        }
 }
 
 void paavalikko::on_btnVaihdaSalasana_clicked()
@@ -63,9 +84,10 @@ void paavalikko::on_btnVaihdaSalasana_clicked()
     pSalasana->show();
 }
 
-
 void paavalikko::on_btnSelaaTapahtumia_clicked()
 {
     pTapahtumat->show();
+    connect(timer, SIGNAL(timeout()), this, SLOT(closeTapahtumat()));
+    timer->start(30000);
 }
 

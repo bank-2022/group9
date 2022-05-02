@@ -15,6 +15,10 @@ public:
     explicit Saldo(QWidget *parent = nullptr);
     ~Saldo();
 
+
+private slots:
+    void on_btnSulje_clicked();
+
 public slots:
     void showData();
 
@@ -22,6 +26,7 @@ private slots:
 
 
     void on_CloseSaldo_clicked();
+
 
 private:
     Ui::Saldo *ui;

@@ -19,6 +19,8 @@ kirjaudu::kirjaudu(QWidget *parent) :
 
     pMyUrl = new MyUrl;
     base_url = pMyUrl->getBase_url();
+
+    timer = new QTimer(this);
 }
 
 kirjaudu::~kirjaudu()
@@ -27,13 +29,16 @@ kirjaudu::~kirjaudu()
     delete pPaavalikko;
     delete pKorttiMain;
 
+
+    ui=nullptr;
+
     pKorttiMain = nullptr;
+    pPaavalikko=nullptr;
 }
 
 void kirjaudu::on_pushButton_clicked()
 {
     QString y = ui->PINKentta->text();
-
 
     if(pWrongPIN->PIN == y && PINcount < 3)
     {
@@ -42,6 +47,8 @@ void kirjaudu::on_pushButton_clicked()
         PINcount = 0;
         this->close();
         pPaavalikko->show();
+        connect(timer, SIGNAL(timeout()), this, SLOT(closeKirjaudu()));
+        timer->start(30000);
     }
     else
     {
@@ -65,10 +72,11 @@ void kirjaudu::on_pushButton_clicked()
     //Kortinnumero = ui->lineNumero->text();
     PINkoodi = ui->PINKentta->text();
 
+    //Kortinnumero = ui->NumeroKentta->text();
+
     QJsonObject jsonObj; //luodaan JSON objekti ja lisätään data
     jsonObj.insert("kortinnumero", "0001");
     jsonObj.insert("PINkoodi", PINkoodi);
-
 
     QNetworkRequest request((base_url + "/login"));
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
@@ -101,5 +109,5 @@ void kirjaudu::loginSlot(QNetworkReply *reply)
 
 void kirjaudu::closeKirjaudu()
 {
-    this->close();
+    pPaavalikko->close();
 }
