@@ -14,6 +14,7 @@ paavalikko::paavalikko(QWidget *parent) :
     pSaldo = new Saldo;
     pSalasana = new Salasana;
     pTapahtumat = new Tapahtumat;
+    timer = new QTimer(this);
 
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(showData()));
@@ -35,6 +36,10 @@ paavalikko::~paavalikko()
     pSalasana = nullptr;
 }
 
+void paavalikko::closeSaldo()
+{
+    pSaldo->close();
+}
 
 void paavalikko::showData()
 {
@@ -46,11 +51,6 @@ void paavalikko::showData()
 void paavalikko::closeTapahtumat()
 {
     pTapahtumat->close();
-
-void paavalikko::closeSaldo()
-{
-    pSaldo->close();
-
 }
 
 void paavalikko::on_btnSaldo_clicked()
