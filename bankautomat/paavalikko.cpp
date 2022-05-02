@@ -1,3 +1,4 @@
+#include "mysingleton.h"
 #include "paavalikko.h"
 #include "ui_paavalikko.h"
 
@@ -12,6 +13,8 @@ paavalikko::paavalikko(QWidget *parent) :
     pSaldo = new Saldo;
     pSalasana = new Salasana;
     pTapahtumat = new Tapahtumat;
+
+
 }
 
 paavalikko::~paavalikko()
@@ -31,6 +34,9 @@ paavalikko::~paavalikko()
 void paavalikko::on_btnSaldo_clicked()
 {
     pSaldo->show();
+
+    //MySingleton *pMySingleton = MySingleton::getInstance();
+    //ui->labelTilinumero->setText(pMySingleton->getTilinumero());
 }
 
 void paavalikko::on_btnNosto_clicked()

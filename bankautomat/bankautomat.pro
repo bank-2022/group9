@@ -18,6 +18,7 @@ SOURCES += \
     locked.cpp \
     main.cpp \
     mainwindow.cpp \
+    mysingleton.cpp \
     myurl.cpp \
     nosto.cpp \
     paavalikko.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     korttimain.h \
     locked.h \
     mainwindow.h \
+    mysingleton.h \
     myurl.h \
     nosto.h \
     paavalikko.h \

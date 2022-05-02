@@ -1,7 +1,8 @@
 #include "kirjaudu.h"
+#include "mysingleton.h"
 #include "ui_kirjaudu.h"
-#include <iostream>
 
+#include <iostream>
 #include <qdebug.h>
 
 kirjaudu::kirjaudu(QWidget *parent) :
@@ -24,8 +25,8 @@ kirjaudu::~kirjaudu()
 {
     delete ui;
     delete pPaavalikko;
-
     delete pKorttiMain;
+
     pKorttiMain = nullptr;
 }
 
@@ -83,6 +84,8 @@ void kirjaudu::loginSlot(QNetworkReply *reply)
     response_data = reply->readAll();
     qDebug() << response_data;
     token = "Bearer " + response_data;
+    MySingleton *pMySingleton = MySingleton::getInstance();
+    pMySingleton->setWebtoken(token);
 
     ui->PINKentta->setText("");
 
