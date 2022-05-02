@@ -40,7 +40,7 @@ public slots:
 
 private:
     Ui::kirjaudu *ui;
-    QTimer * timer;
+    QTimer * pQTimer;
     paavalikko * pPaavalikko;
     WrongPIN * pWrongPIN;
 
