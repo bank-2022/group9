@@ -2,7 +2,6 @@
 #include "mysingleton.h"
 #include "ui_korttimain.h"
 
-
 #include <QDebug>
 
 KorttiMain::KorttiMain(QString kortNumero, QString kortPIN, QByteArray token, QWidget *parent) :

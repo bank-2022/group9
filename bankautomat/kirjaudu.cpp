@@ -40,7 +40,7 @@ void kirjaudu::on_pushButton_clicked()
 {
     QString y = ui->PINKentta->text();
 
-    if(pWrongPIN->PIN == y && PINcount < 3)
+    if("000001" == y && PINcount < 3)
     {
         std::cout << "Hyvaksytty" << std::flush;
         std::cout << std::endl;
@@ -75,7 +75,7 @@ void kirjaudu::on_pushButton_clicked()
     //Kortinnumero = ui->NumeroKentta->text();
 
     QJsonObject jsonObj; //luodaan JSON objekti ja lisätään data
-    jsonObj.insert("kortinnumero", "0001");
+    jsonObj.insert("kortinnumero", "1001");
     jsonObj.insert("PINkoodi", PINkoodi);
 
     QNetworkRequest request((base_url + "/login"));

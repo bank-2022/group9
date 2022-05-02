@@ -25,6 +25,8 @@ public slots:
     void showData();
     void closeTapahtumat();
     void closeSaldo();
+    void closeNosto();
+    void closeSalasana();
     
 private slots:
     void on_btnSaldo_clicked();
