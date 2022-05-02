@@ -21,6 +21,9 @@ public:
     explicit paavalikko(QWidget *parent = nullptr);
     ~paavalikko();
 
+public slots:
+    void closeSaldo();
+
 private slots:
     void on_btnSaldo_clicked();
 
@@ -38,6 +41,7 @@ private:
     Saldo *pSaldo;
     Tapahtumat *pTapahtumat;
     Salasana *pSalasana;
+    QTimer *timer;
 };
 
 #endif // PAAVALIKKO_H

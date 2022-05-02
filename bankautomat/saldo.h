@@ -15,10 +15,20 @@ public:
     explicit Saldo(QWidget *parent = nullptr);
     ~Saldo();
 
+public slots:
+    void showData();
+
+private slots:
+
+
+    void on_CloseSaldo_clicked();
+
 private:
     Ui::Saldo *ui;
 
     float saldo = 2094.42f;
+
+    QTimer *timer;
 };
 
 #endif // SALDO_H

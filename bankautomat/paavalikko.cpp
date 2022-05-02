@@ -13,6 +13,7 @@ paavalikko::paavalikko(QWidget *parent) :
     pSaldo = new Saldo;
     pSalasana = new Salasana;
     pTapahtumat = new Tapahtumat;
+    timer = new QTimer(this);
 
 
 }
@@ -31,9 +32,17 @@ paavalikko::~paavalikko()
     pSalasana = nullptr;
 }
 
+void paavalikko::closeSaldo()
+{
+    pSaldo->close();
+}
+
 void paavalikko::on_btnSaldo_clicked()
 {
     pSaldo->show();
+
+    connect(timer, SIGNAL(timeout()), this, SLOT(closeSaldo()));
+    timer->start(10000);
 
     //MySingleton *pMySingleton = MySingleton::getInstance();
     //ui->labelTilinumero->setText(pMySingleton->getTilinumero());
