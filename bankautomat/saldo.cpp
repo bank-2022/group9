@@ -35,16 +35,7 @@ void Saldo::showData()
     ui->saldoLabel->setText(pMySingleton->getSaldo());
 }
 
-
-
-
-
-
-
-
-
 void Saldo::on_CloseSaldo_clicked()
 {
     this->close();
 }
-

@@ -2,8 +2,6 @@
 
 MySingleton* MySingleton::instance = nullptr;
 
-
-
 const QString &MySingleton::getNimi() const
 {
     return nimi;
@@ -24,8 +22,6 @@ void MySingleton::setLahiOsoite(const QString &newLahiOsoite)
     lahiOsoite = newLahiOsoite;
 }
 
-
-
 const QByteArray &MySingleton::getWebtoken() const
 {
     return webtoken;
@@ -45,8 +41,6 @@ void MySingleton::setTilinumero(const QString &newTilinumero)
 {
     tilinumero = newTilinumero;
 }
-
-
 
 const QString &MySingleton::getNumero() const
 {
@@ -107,8 +101,6 @@ void MySingleton::setTapahtuma(const QString &newTapahtuma)
 {
     tapahtuma = newTapahtuma;
 }
-
-
 
 const QString &MySingleton::getTunnus() const
 {

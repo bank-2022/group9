@@ -1,6 +1,7 @@
 #ifndef ASIAKAS_H
 #define ASIAKAS_H
 
+#include "paavalikko.h"
 #include "myurl.h"
 
 #include <QDialog>
@@ -27,6 +28,8 @@ private:
     Ui::Asiakas *ui;
 
     MyUrl *pMyUrl;
+
+    paavalikko *pPaavalikko;
 
     QNetworkAccessManager *dataManager;
     QNetworkReply *reply;
