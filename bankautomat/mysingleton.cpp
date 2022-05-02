@@ -3,7 +3,6 @@
 MySingleton* MySingleton::instance = nullptr;
 
 
-
 const QString &MySingleton::getNimi() const
 {
     return nimi;
@@ -25,7 +24,6 @@ void MySingleton::setLahiOsoite(const QString &newLahiOsoite)
 }
 
 
-
 const QByteArray &MySingleton::getWebtoken() const
 {
     return webtoken;
@@ -45,7 +43,6 @@ void MySingleton::setTilinumero(const QString &newTilinumero)
 {
     tilinumero = newTilinumero;
 }
-
 
 
 const QString &MySingleton::getNumero() const
@@ -109,7 +106,6 @@ void MySingleton::setTapahtuma(const QString &newTapahtuma)
 }
 
 
-
 const QString &MySingleton::getTunnus() const
 {
     return tunnus;
@@ -120,6 +116,7 @@ void MySingleton::setTunnus(const QString &newTunnus)
     tunnus = newTunnus;
 }
 
+
 const QString &MySingleton::getSaldo() const
 {
     return saldo;
@@ -129,6 +126,7 @@ void MySingleton::setSaldo(const QString &newSaldo)
 {
     saldo = newSaldo;
 }
+
 
 const QString &MySingleton::getPuhelin() const
 {
@@ -149,6 +147,7 @@ void MySingleton::setSumma(const QString &newSumma)
 {
     summa = newSumma;
 }
+
 
 MySingleton* MySingleton::getInstance()
 {
