@@ -33,6 +33,7 @@ void Saldo::showData()
     ui->label_Nimi->setText(pMySingleton->getNimi());
     ui->label_Osoite->setText(pMySingleton->getLahiOsoite());
     ui->saldoLabel->setText(pMySingleton->getSaldo());
+    ui->label_Puhelin->setText(pMySingleton->getPuhelin());
 }
 
 
