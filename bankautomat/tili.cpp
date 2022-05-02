@@ -54,6 +54,7 @@ void Tili::dataSlot(QNetworkReply *reply)
 
         MySingleton *pMySingleton = MySingleton::getInstance();
         pMySingleton->setTilinumero(tilinumero);
+        pMySingleton->setSaldo(saldo);
 
         qDebug() << "Tilinumero:" <<tilinumero;
         qDebug()<< "Saldo:" << saldo;

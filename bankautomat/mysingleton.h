@@ -10,43 +10,37 @@ private:
 
     QByteArray webtoken;
 
-    //kortti
+    // kortti
     QString numero;
     QString PIN;
 
     // asiakas
-    int tunnus;
+    QString tunnus;
     QString nimi;
     QString lahiOsoite;
-    int puhelin;
+    QString puhelin;
 
     // tili
     QString tilinumero;
-    float saldo;
+    QString saldo;
 
     // tilitapahtumat
     QString tilinumero2;
     QString kortinnumero2;
     QString PJK;
     QString tapahtuma;
-    float summa;
+    QString summa;
 
 public:
     static MySingleton* getInstance();
-    int getTunnus() const;
-    void setTunnus(int newTunnus);
     const QString &getNimi() const;
     void setNimi(const QString &newNimi);
     const QString &getLahiOsoite() const;
     void setLahiOsoite(const QString &newLahiOsoite);
-    int getPuhelin() const;
-    void setPuhelin(int newPuhelin);
     const QByteArray &getWebtoken() const;
     void setWebtoken(const QByteArray &newWebtoken);
     const QString &getTilinumero() const;
     void setTilinumero(const QString &newTilinumero);
-    float getSaldo() const;
-    void setSaldo(float newSaldo);
     const QString &getNumero() const;
     void setNumero(const QString &newNumero);
     const QString &getPIN() const;
@@ -59,8 +53,14 @@ public:
     void setPJK(const QString &newPJK);
     const QString &getTapahtuma() const;
     void setTapahtuma(const QString &newTapahtuma);
-    float getSumma() const;
-    void setSumma(float newSumma);
+    const QString &getTunnus() const;
+    void setTunnus(const QString &newTunnus);
+    const QString &getPuhelin() const;
+    void setPuhelin(const QString &newPuhelin);
+    const QString &getSumma() const;
+    void setSumma(const QString &newSumma);
+    const QString &getSaldo() const;
+    void setSaldo(const QString &newSaldo);
 };
 
 #endif // MYSINGLETON_H

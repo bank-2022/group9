@@ -2,16 +2,6 @@
 
 MySingleton* MySingleton::instance = nullptr;
 
-int MySingleton::getTunnus() const
-{
-    return tunnus;
-}
-
-void MySingleton::setTunnus(int newTunnus)
-{
-    tunnus = newTunnus;
-}
-
 const QString &MySingleton::getNimi() const
 {
     return nimi;
@@ -32,16 +22,6 @@ void MySingleton::setLahiOsoite(const QString &newLahiOsoite)
     lahiOsoite = newLahiOsoite;
 }
 
-int MySingleton::getPuhelin() const
-{
-    return puhelin;
-}
-
-void MySingleton::setPuhelin(int newPuhelin)
-{
-    puhelin = newPuhelin;
-}
-
 const QByteArray &MySingleton::getWebtoken() const
 {
     return webtoken;
@@ -60,16 +40,6 @@ const QString &MySingleton::getTilinumero() const
 void MySingleton::setTilinumero(const QString &newTilinumero)
 {
     tilinumero = newTilinumero;
-}
-
-float MySingleton::getSaldo() const
-{
-    return saldo;
-}
-
-void MySingleton::setSaldo(float newSaldo)
-{
-    saldo = newSaldo;
 }
 
 const QString &MySingleton::getNumero() const
@@ -132,14 +102,44 @@ void MySingleton::setTapahtuma(const QString &newTapahtuma)
     tapahtuma = newTapahtuma;
 }
 
-float MySingleton::getSumma() const
+const QString &MySingleton::getTunnus() const
+{
+    return tunnus;
+}
+
+void MySingleton::setTunnus(const QString &newTunnus)
+{
+    tunnus = newTunnus;
+}
+
+const QString &MySingleton::getPuhelin() const
+{
+    return puhelin;
+}
+
+void MySingleton::setPuhelin(const QString &newPuhelin)
+{
+    puhelin = newPuhelin;
+}
+
+const QString &MySingleton::getSumma() const
 {
     return summa;
 }
 
-void MySingleton::setSumma(float newSumma)
+void MySingleton::setSumma(const QString &newSumma)
 {
     summa = newSumma;
+}
+
+const QString &MySingleton::getSaldo() const
+{
+    return saldo;
+}
+
+void MySingleton::setSaldo(const QString &newSaldo)
+{
+    saldo = newSaldo;
 }
 
 MySingleton* MySingleton::getInstance()

@@ -16,3 +16,9 @@ Saldo::~Saldo()
 {
     delete ui;
 }
+
+void Saldo::on_btnSulje_clicked()
+{
+    this->close();
+}
+
