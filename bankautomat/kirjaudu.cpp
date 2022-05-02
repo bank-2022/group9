@@ -29,7 +29,9 @@ kirjaudu::~kirjaudu()
     delete pPaavalikko;
     delete pKorttiMain;
 
+
     ui=nullptr;
+
     pKorttiMain = nullptr;
     pPaavalikko=nullptr;
 }
