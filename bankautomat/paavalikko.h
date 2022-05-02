@@ -22,12 +22,7 @@ public:
     ~paavalikko();
 
 public slots:
-
-    void showData();
-    void closeTapahtumat();
-
     void closeSaldo();
-
 
 private slots:
     void on_btnSaldo_clicked();
@@ -46,7 +41,6 @@ private:
     Saldo *pSaldo;
     Tapahtumat *pTapahtumat;
     Salasana *pSalasana;
-
     QTimer *timer;
 };
 

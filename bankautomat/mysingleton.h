@@ -10,9 +10,7 @@ private:
 
     QByteArray webtoken;
 
-
-    // kortti
-
+    //kortti
     QString numero;
     QString PIN;
 
@@ -63,12 +61,10 @@ public:
     void setTunnus(const QString &newTunnus);
     const QString &getSaldo() const;
     void setSaldo(const QString &newSaldo);
-
     const QString &getPuhelin() const;
     void setPuhelin(const QString &newPuhelin);
     const QString &getSumma() const;
     void setSumma(const QString &newSumma);
-
 };
 
 #endif // MYSINGLETON_H

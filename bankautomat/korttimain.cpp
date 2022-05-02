@@ -1,5 +1,4 @@
 #include "korttimain.h"
-#include "mysingleton.h"
 #include "ui_korttimain.h"
 
 
@@ -56,10 +55,6 @@ void KorttiMain::dataSlot(QNetworkReply *reply)
             kortinnumero=QString(json_obj["kortinnumero"].toString());
             PINkoodi=QString(json_obj["PINkoodi"].toString());
         }
-
-        MySingleton *pMySingleton = MySingleton::getInstance();
-        pMySingleton->setNumero(kortinnumero);
-        pMySingleton->setPIN(PINkoodi);
 
         qDebug()<< "Kortin numero:" <<kortinnumero;
         qDebug()<< "PIN:" << PINkoodi;

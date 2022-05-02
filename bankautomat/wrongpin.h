@@ -1,8 +1,6 @@
 #ifndef WRONGPIN_H
 #define WRONGPIN_H
 
-#include "mysingleton.h"
-
 #include <QDialog>
 
 namespace Ui {
