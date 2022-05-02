@@ -1,14 +1,12 @@
 #ifndef KORTTIMAIN_H
 #define KORTTIMAIN_H
 
-
 #include "myurl.h"
 
 #include <QDialog>
 #include <QtNetwork>
 #include <QNetworkAccessManager>
 #include <QJsonDocument>
-
 
 namespace Ui {
 class KorttiMain;

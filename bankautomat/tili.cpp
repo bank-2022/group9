@@ -1,3 +1,4 @@
+#include "mysingleton.h"
 #include "tili.h"
 #include "ui_tili.h"
 
@@ -50,6 +51,9 @@ void Tili::dataSlot(QNetworkReply *reply)
             tilinumero=QString(json_obj["tilinumero"].toString());
             saldo=QString::number(json_obj["saldo"].toDouble());
         }
+
+        MySingleton *pMySingleton = MySingleton::getInstance();
+        pMySingleton->setTilinumero(tilinumero);
 
         qDebug() << "Tilinumero:" <<tilinumero;
         qDebug()<< "Saldo:" << saldo;

@@ -65,19 +65,6 @@
     <string>Vaihda salasana</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelAsiakas">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>30</y>
-     <width>49</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="btnSelaaTapahtumia">
    <property name="geometry">
     <rect>
@@ -89,6 +76,19 @@
    </property>
    <property name="text">
     <string>Selaa tapahtumia</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTilinumero">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>10</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

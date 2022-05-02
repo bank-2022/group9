@@ -2,7 +2,6 @@
 #define KIRJAUDU_H
 
 #include <QDialog>
-#include <string>
 #include <QtNetwork>
 #include <QNetworkAccessManager>
 #include <QJsonDocument>
@@ -11,15 +10,9 @@
 #include "wrongpin.h"
 #include "locked.h"
 #include "myurl.h"
-
-
 #include "asiakas.h"
-#include "asiakasmain.h"
 #include "tili.h"
 #include "tilitapahtumat.h"
-
-
-
 
 using namespace std;
 
@@ -38,7 +31,6 @@ public:
     int PINcount = 0;
     Locked * pLocked;
 
-
 private slots:
     void on_pushButton_clicked();
     void loginSlot(QNetworkReply *reply);
@@ -53,7 +45,6 @@ private:
     WrongPIN * pWrongPIN;
 
     KorttiMain *pKorttiMain;
-
     QString Kortinnumero;
     QString PINkoodi;
 
@@ -73,7 +64,6 @@ private:
     QString PJK;
     QString Tapahtuma;
     float Summa;
-
 
     MyUrl *pMyUrl;
     QString base_url;
