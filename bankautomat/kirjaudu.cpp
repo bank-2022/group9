@@ -38,7 +38,7 @@ void kirjaudu::on_pushButton_clicked()
 {
     QString y = ui->PINKentta->text();
 
-    if(pWrongPIN->PIN == y && PINcount < 3)
+    if("123456" == y && PINcount < 3)
     {
         std::cout << "Hyvaksytty" << std::flush;
         std::cout << std::endl;

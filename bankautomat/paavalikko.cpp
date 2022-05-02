@@ -46,6 +46,16 @@ void paavalikko::closeTapahtumat()
     pTapahtumat->close();
 }
 
+void paavalikko::closeNosto()
+{
+    pNosto->close();
+}
+
+void paavalikko::closeSalasana()
+{
+    pSalasana->close();
+}
+
 void paavalikko::on_btnSaldo_clicked()
 {
     pSaldo->show();
@@ -54,6 +64,8 @@ void paavalikko::on_btnSaldo_clicked()
 void paavalikko::on_btnNosto_clicked()
 {
     pNosto->show();
+    connect(timer, SIGNAL(timeout()), this, SLOT(closeNosto()));
+    timer->start(10000);
 }
 
 void paavalikko::on_btnKirjauduUlos_clicked()
@@ -69,6 +81,8 @@ void paavalikko::on_btnKirjauduUlos_clicked()
 void paavalikko::on_btnVaihdaSalasana_clicked()
 {
     pSalasana->show();
+    connect(timer, SIGNAL(timeout()), this, SLOT(closeSalasana()));
+    timer->start(10000);
 }
 
 void paavalikko::on_btnSelaaTapahtumia_clicked()
