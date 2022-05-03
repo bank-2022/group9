@@ -1,4 +1,5 @@
 #include "asiakas.h"
+#include "mysingleton.h"
 #include "ui_asiakas.h"
 
 #include <QDebug>
@@ -55,6 +56,12 @@ void Asiakas::dataSlot(QNetworkReply *reply)
             lahiOsoite=QString(json_obj["lähiosoite"].toString());
             puhelin=QString::number(json_obj["puhelinnumero"].toInt());
         }
+
+        MySingleton *pMySingleton = MySingleton::getInstance();
+        pMySingleton->setTunnus(tunnus);
+        pMySingleton->setNimi(nimi);
+        pMySingleton->setLahiOsoite(lahiOsoite);
+        pMySingleton->setPuhelin(puhelin);
 
         qDebug() << "Tunnus:" <<tunnus;
         qDebug()<< "Nimi:" << nimi;

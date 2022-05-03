@@ -2,9 +2,9 @@
 #define PAAVALIKKO_H
 
 #include <QDialog>
+
 #include "nosto.h"
 #include "saldo.h"
-
 #include "salasana.h"
 #include "korttimain.h"
 #include "tapahtumat.h"
@@ -21,6 +21,13 @@ public:
     explicit paavalikko(QWidget *parent = nullptr);
     ~paavalikko();
 
+public slots:
+    void showData();
+    void closeTapahtumat();
+    void closeSaldo();
+    void closeNosto();
+    void closeSalasana();
+    
 private slots:
     void on_btnSaldo_clicked();
 
@@ -38,6 +45,7 @@ private:
     Saldo *pSaldo;
     Tapahtumat *pTapahtumat;
     Salasana *pSalasana;
+    QTimer *timer;
 };
 
 #endif // PAAVALIKKO_H
